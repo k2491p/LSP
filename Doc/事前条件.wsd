@@ -1,0 +1,41 @@
+@startuml
+skinparam dpi 150
+
+'Playerインターフェース
+interface Player {
+	+Weapons weapon
+	+void Attack()
+}
+
+'剣士クラス
+class Swordman {
+  +Weapons weapon
+  +void Attack()
+}
+'魔法使いクラス
+class Wizard {
+  +Weapons weapon
+  +void Attack()
+}
+
+'武器インターフェース
+interface Weapons {
+	+string name
+}
+'剣クラス
+class Sword {
+  +string name
+}
+'魔法の杖クラス
+class MagicWand {
+  +string name
+}
+
+
+' クラス間の関係
+Player <|-- Swordman
+Player <|-- Wizard
+Player -|> Weapons
+Weapons <|-- Sword
+Weapons <|-- MagicWand
+@enduml
