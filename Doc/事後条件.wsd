@@ -1,0 +1,27 @@
+@startuml
+skinparam dpi 150
+
+'長方形クラス
+class Rectangle {
+	+ void SetHeight(int x)
+	+ void SetWidth(int x)
+	+ int Height
+	+ int Width
+}
+
+'正方形クラス
+class Square {
+	+void SetHeight(int x)
+	+void SetWidth(int x)
+	+ int Height
+	+ int Width
+}
+'ユーザークラス
+class User {
+}
+
+
+' クラス間の関係
+Rectangle <|-- Square
+Rectangle <|- User
+@enduml
