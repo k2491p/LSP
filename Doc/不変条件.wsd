@@ -1,0 +1,21 @@
+@startuml
+skinparam dpi 150
+
+'未成年クラス
+class 未成年 {
+	+ int Age
+	--
+	* 0 <= Age && Age < 18
+}
+
+'乳幼児クラス
+class 乳幼児 {
+	+ int Age
+	--
+	* 0 <= Age && Age < 6
+}
+
+
+' クラス間の関係
+未成年 <|- 乳幼児
+@enduml
