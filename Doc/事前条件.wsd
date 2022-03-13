@@ -1,34 +1,34 @@
 @startuml
 skinparam dpi 150
 
-'Playerインターフェース
-interface Player {
-	+Weapons weapon
-	+void Attack()
+'Player抽象クラス
+abstract class Player {
+	+void Attack(Weapons weapon)
 }
 
 '剣士クラス
 class Swordman {
-  +Weapons weapon
-  +void Attack()
+  +void Attack(Weapons weapon)
 }
 '魔法使いクラス
 class Wizard {
-  +Weapons weapon
-  +void Attack()
+  +void Attack(Weapons weapon)
 }
 
 '武器インターフェース
-interface Weapons {
+abstract class Weapons {
 	+string name
+	+int power
 }
 '剣クラス
 class Sword {
   +string name
+  +int power
 }
 '魔法の杖クラス
 class MagicWand {
   +string name
+  +int power
 }
 
 
